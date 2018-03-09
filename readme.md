@@ -4,17 +4,7 @@ A bot for the popular mobile game HQ Trivia
 
 ## Usage
 
-```bash
-usage: bot.py [-h] [-v] [-a] [-s] [-i INPUT_FILE]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -v, --verbose         increase output verbosity
-  -a, --android         use android device (adb)
-  -s, --sample          use sample images
-  -i INPUT_FILE, --input_file INPUT_FILE
-                        use specific images
-```
+![Usage](usage.png)
 
 ## Example
 
@@ -25,7 +15,7 @@ optional arguments:
 ![Test Question](test_question2.png)
 
 
-![Test Question](screenshot_question2.png)
+![Test Question](example.png)
 
 `Busking (Verb) - the act of performing in public places for gratuities. In many countries the rewards are generally in the form of money.`
 

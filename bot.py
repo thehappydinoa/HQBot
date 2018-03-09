@@ -262,6 +262,7 @@ if __name__ == "__main__":
     try:
         config = ConfigParser.RawConfigParser()
         config.read(os.path.join(os.path.dirname(__file__), 'bot.cfg'))
+        #config.read(os.path.join(os.path.dirname(__file__), 'bot-523ce4ab538b.cfg'))
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = config.get(
             'bot_config', 'GOOGLE_APPLICATION_CREDENTIALS')
 
