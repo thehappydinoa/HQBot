@@ -271,6 +271,10 @@ if __name__ == "__main__":
         customsearch_developerKey = config.get(
             'bot_config', 'customsearch_developerKey')
 
+        if not ".json" in os.environ["GOOGLE_APPLICATION_CREDENTIALS"] and not ":" in customsearch_id and not "_" in customsearch_developerKey:
+            print(bad + "API keys incorrectly configured")
+            exit(1)
+
         parser = argparse.ArgumentParser()
         parser.add_argument("-v", "--verbose",
                             help="increase output verbosity", action="store_true")
