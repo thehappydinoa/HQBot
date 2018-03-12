@@ -3,7 +3,7 @@ import io
 import os
 import six
 import json
-import queue
+import Queue
 import urllib2
 import argparse
 import threading
@@ -209,7 +209,7 @@ def find_answer(path):
                 if args.verbose:
                     print(bad + 'Could not find key words')
 
-    results2_queue = queue.Queue()
+    results2_queue = Queue.Queue()
     search2 = threading.Thread(target=search, args=(
         service, question2, answers, results2_queue))
     search2.start()
