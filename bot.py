@@ -300,18 +300,18 @@ if __name__ == "__main__":
             questionNum = 1
             while questionNum <= 15:
                 screencap_name = strftime(
-                    "%Y-%m-%d_%H:%M:%S", gmtime()) + '_' + str(questionNum) + '.png'
+                    "%Y-%m-%d_%H-%M-%S", gmtime()) + '_' + str(questionNum) + '.png'
                 raw_input(
                     que + 'Click enter when question is on the screen ')
                 os.system(
-                    'adb shell screencap -p /storage/emulated/0/HQ/' + screencap_name)
-                os.system('adb pull /storage/emulated/0/HQ/' + screencap_name)
+                    'adb shell screencap -p /sdcard/HQ/' + screencap_name)
+                os.system('adb pull /sdcard/HQ/' + screencap_name)
                 screencap_file = os.path.join(
                     os.path.dirname(__file__), screencap_name)
                 find_answer(screencap_file)
                 os.rename(screencap_file, os.path.join(
                     today_folder, screencap_name))
-                os.system('adb shell rm /storage/emulated/0/HQ/' +
+                os.system('adb shell rm /sdcard/HQ/' +
                           screencap_name)
                 questionNum += 1
 
